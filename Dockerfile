@@ -1,5 +1,5 @@
-FROM node:7.8.0
+FROM node:18-alpine
 WORKDIR /opt
-ADD . /opt
+COPY . .
 RUN npm install
-ENTRYPOINT npm run start
+CMD ["npm", "start"]
