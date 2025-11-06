@@ -10,15 +10,15 @@ pipeline {
     stage('Checkout') {
       steps {
         checkout([
-                                        $class: 'GitSCM',
-                                        branches: [[name: '*/main']],
-                                        doGenerateSubmoduleConfigurations: false,
-                                        extensions: [],
-                                        userRemoteConfigs: [[
-                                                url: 'https://github.com/NeckerFree/creating-pipeline-blue-ocean.git',
-                                                credentialsId: "${GIT_CREDENTIALS}"
-                                            ]]
-                                        ])
+                                                  $class: 'GitSCM',
+                                                  branches: [[name: '*/main']],
+                                                  doGenerateSubmoduleConfigurations: false,
+                                                  extensions: [],
+                                                  userRemoteConfigs: [[
+                                                            url: 'https://github.com/NeckerFree/creating-pipeline-blue-ocean.git',
+                                                            credentialsId: "${GIT_CREDENTIALS}"
+                                                        ]]
+                                                    ])
           }
         }
 
