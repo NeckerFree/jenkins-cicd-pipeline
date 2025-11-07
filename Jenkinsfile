@@ -30,7 +30,7 @@ pipeline {
 
         stage('Build') {
           steps {
-            sh 'npm start'
+            sh 'npm start & sleep 600'
           }
         }
 
